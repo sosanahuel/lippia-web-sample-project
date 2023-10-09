@@ -1,4 +1,4 @@
-@account
+
 Feature: Como usuario deseo poder probar el login
 
   Background: El usuario ingresa a la pagina practice automationtesting
@@ -17,7 +17,7 @@ Feature: Como usuario deseo poder probar el login
   @lostPassword
   Scenario Outline: Login fallido por contraseña incorrecta
     When el usuario hace click en MyAccount
-    And el usuario ingresa <mail> o <contrasenia> incorrectos
+    And el usuario ingresa <mail> correcto y <contrasenia> incorrecto
     And el usuario hace click en Login
     Then valida que <aviso> aparezca
     Examples:

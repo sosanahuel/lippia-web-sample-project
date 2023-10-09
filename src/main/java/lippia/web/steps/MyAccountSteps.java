@@ -27,8 +27,8 @@ public class MyAccountSteps {
         MyAccountService.ValidarUsuario(usuario);
     }
 
-    @And("^el usuario ingresa (.*) o (.*) incorrectos$")
-    public void el_usuario_ingresa_mail_o_contrasenia_incorrectos(String mail, String contrasenia) {
+    @And("^el usuario ingresa (.*) correcto y (.*) incorrecto$")
+    public void el_usuario_ingresa_contrasenia_incorrecto(String mail, String contrasenia) {
         MyAccountService.SendEmail(mail);
         MyAccountService.SendPassword(contrasenia);
     }
